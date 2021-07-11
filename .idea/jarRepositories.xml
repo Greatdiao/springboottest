@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="odianyun-ThirdPublic" />
+      <option name="name" value="ThirdPublic" />
+      <option name="url" value="http://maven.ops.oudianyun.com/content/repositories/ThirdPublic/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="cloudera" />
+      <option name="name" value="cloudera" />
+      <option name="url" value="https://repository.cloudera.com/artifactory/cloudera-repos/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="odianyun-releases" />
+      <option name="name" value="odianyun releases Repository" />
+      <option name="url" value="http://maven.ops.oudianyun.com/content/repositories/releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="odianyun-public" />
+      <option name="name" value="odianyun public Repository" />
+      <option name="url" value="http://maven.ops.oudianyun.com/content/repositories/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="odianyun-snapshots" />
+      <option name="name" value="odianyun snapshots Repository" />
+      <option name="url" value="http://maven.ops.oudianyun.com/content/repositories/snapshots-2d9d6-trunk" />
+    </remote-repository>
+  </component>
+</project>
