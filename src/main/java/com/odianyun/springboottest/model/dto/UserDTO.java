@@ -13,6 +13,14 @@ public class UserDTO {
     private String name;
     private Integer age;
 
+    private String mobile;
+    private String password;
+
+    private Long companyId = 21001L;
+
+    private Integer pageNo;
+    private Integer pageSize;
+
     public String getName() {
         return name;
     }
@@ -27,5 +35,45 @@ public class UserDTO {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Long getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
+    }
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 }

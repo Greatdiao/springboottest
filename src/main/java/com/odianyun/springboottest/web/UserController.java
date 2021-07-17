@@ -6,7 +6,6 @@ import com.odianyun.springboottest.model.dto.UserDTO;
 import com.odianyun.springboottest.model.po.UUser;
 import com.odianyun.springboottest.model.vo.UserVO;
 import com.odianyun.springboottest.service.UserService;
-import com.odianyun.springboottest.startup.config.RedisConfig;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -37,8 +36,6 @@ public class UserController {
 
     @Resource
     private UserService userService;
-    @Resource
-    private RedisConfig redisConfig;
 
     @GetMapping("/getById")
     public UUser getById(Long id) {
@@ -47,11 +44,9 @@ public class UserController {
     }
 
     @GetMapping("/get")
-    public UserVO get() {
-        UserVO userVO = new UserVO();
-        userVO.setAge(25);
-        userVO.setName("张三");
-        return userVO;
+    public UUser get(Long id) {
+        UUser uUser = userService.get(id);
+        return uUser;
     }
 
     @PostMapping("/getUser")
@@ -88,11 +83,22 @@ public class UserController {
         return map;
     }
 
-    @GetMapping("/getRedisConfig")
-    public Map getRedisConfig() {
-        Map<String, Object> map = Maps.newHashMap();
-        map.put("ip", redisConfig.getIp());
-        map.put("port", redisConfig.getPort());
-        return map;
+    @PostMapping("add")
+    public UUser add(@RequestBody UserDTO dto){
+        UUser user = userService.add(dto);
+        return user;
+    }
+
+    @PostMapping("batchAdd")
+    public UUser batchAdd(@RequestBody List<UserDTO> list){
+        UUser user = userService.batchAdd(list);
+        return user;
+    }
+
+
+    @PostMapping("list")
+    public List<UUser> list(@RequestBody UserDTO dto){
+        List<UUser> userList = userService.list(dto);
+        return userList;
     }
 }
